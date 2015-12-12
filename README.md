@@ -3,6 +3,7 @@
  After running the instance and making sure that all the librarys are installed
 
  Please run :
+ 
     psql -U postgres
    
     CREATE USER tali WITH PASSWORD 'pass'
@@ -33,17 +34,27 @@
     VACUUM FREEZE;
 
  Then create the DATABASE
+ 
     CREATE DATABASE tcount WITH OWNER tali ENCODING 'utf-8';
+    
  go to tcount database
+ 
 	psql -U tali tcount
+    
 	DELETE TABLE Tweetwordcount;
+    
 	CREATE TABLE Tweetwordcount (id serial PRIMARY KEY, word TEXT      NOT NULL,count INT     NOT NULL);
 
-exit from postgres or open a new terminal
+exit from postgres or open a new terminal  
+
 make a projetc of EX2Twwetwordcount
+
     sparse quick EX2Twwetwordcount
+    
 go to the directory of EX2Twwetwordcount
+
 replace the topology and spouts and bolts
+
     sparse run 
 
 
