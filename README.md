@@ -11,6 +11,7 @@
     CREATE DATABASE Tcount WITH OWNER tali ENCODING 'utf-8';
    
  If you got an error for utf-8 Please run the following scripts:
+ 
  First, we need to drop template1. Templates can’t be dropped, so we first modify it so t’s an ordinary database:
 
     UPDATE pg_database SET datistemplate = FALSE WHERE datname = 'template1';
